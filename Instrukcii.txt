@@ -1,0 +1,14 @@
+browser-sync start --server --directory --files "**/*"
+
+git add .
+git status
+git commit -m "Ime"
+
+git config --global user.email "mail-koj bilo"
+git config --global user.name "koj bilo name"
+
+git commit -m "Poraka"
+
+git status - vidi dali e 
+
+git push 
