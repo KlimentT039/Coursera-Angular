@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="Expression">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+
+    <title>Expressions and Interpolation</title>
+  </head>
+  <body>
+    <h1>Expressions and Interpolation</h1>
+
+    <div ng-controller="ExpInt">
+      Message is: <br>
+      {{sayMessage()}}
+
+      <div>
+        <button ng-click="puppy2()">See the second puppy</button>
+        <br>
+        <img ng-src="images/puppy_{{koe}}.jpg"
+      </div>
+
+    </div>
+
+  </body>
+</html>
