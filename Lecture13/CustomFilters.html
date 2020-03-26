@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+
+    <title>Custom Filters in Angular</title>
+  </head>
+  <body>
+      <h1 style="font-style:bold">Custom Filters in Angular</h1>
+
+      <div ng-controller="ctrl">
+        {{message}}
+      <br>
+          <button ng-click="change()">Change the sentence</button><br>
+        The truth is: {{ message | truth : 'fokin' : 'biggest'}}<br>
+        BIG TRUTH: {{ sayCustom() | truth : 'fokin' : 'biggest' |  uppercase}}
+
+      </div>
+  </body>
+</html>
