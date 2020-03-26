@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="Filters">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+
+    <title>Filters in AngularJs</title>
+  </head>
+  <body>
+    <h1>Filters in AngularJs</h1>
+
+    <div ng-controller="FiltersCon">
+      Message is: <br>
+      {{sayMessage()}}
+
+      <div>
+        <button ng-click="puppy2()" ng-blur="vratiPrvo()">See the second puppy</button>
+        Cost: {{cookieCost | currency}}
+        <br>
+        <img ng-src="images/puppy_{{koe}}.jpg"
+      </div>
+
+    </div>
+
+  </body>
+</html>
