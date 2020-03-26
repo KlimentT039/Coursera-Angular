@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="DigestA">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <title>Digest Cycle</title>
+  </head>
+  <body>
+    <h1 style="font-style:bold">Digest Cycle in AngularJs</h1>
+
+    <div ng-controller="DigestControl">
+
+      <button ng-click="showNumberOfWatchers()">
+        Log # of Watchers</button>
+        <input type="text" ng-model="name">
+        <div>
+          <button ng-click="countOnce()">Up Once Counter (once)</button>
+        </div>
+
+        <div>
+          <button ng-click="upCounter()">Up Once Counter more times</button>
+        </div>
+
+        <div>
+          Once Counter: {{onceCounter}} <br>
+          Regular Coutner: {{counter}}
+        </div>
+    </div>
+  </body>
+</html>
