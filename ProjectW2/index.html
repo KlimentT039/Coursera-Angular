@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" ng-app="ProjectW2">
+  <head>
+    <title>Shopping List Check Off</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <style>
+      .emptyMessage {
+        font-weight: bold;
+        color: red;
+        font-size: 1.2em;
+      }
+      li {
+        margin-bottom: 7px;
+        font-size: 1.2em;
+      }
+      li > button {
+        margin-left: 6px;
+      }
+      button > span {
+        color: green;
+      }
+    </style>
+  </head>
+<body >
+  <h1>Buying Items from a Shopping List</h1>
+  <div id="list1" ng-controller="ShoppingListBuying as itemAdder" >
+    <h2>To buy: </h2>
+      <p>Add items: </p>
+      <input type="text" ng-model="itemAdder.itemName" placeholder="item Name">
+      <input type="text" ng-model="itemAdder.itemQuantity" placeholder="item Quantity">
+      <button ng-click="itemAdder.addItem()">Add Item</button>
+
+      <div>
+        <ol>
+          <li ng-repeat = "item in itemAdder.items">
+            Buy {{item.quantity}} {{item.name}}
+            <button ng-click = "itemAdder.removeItem($index);">Bought</button>
+          </li>
+        </ol>
+      </div>
+
+</div>
+
+<div ng-controller="ShoppingListBought as itemBought">
+
+  <h2>Already bought: </h2>
+    <ol>
+      <li ng-repeat = "item in itemBought.items">
+        Bought {{item.quantity}} {{item.name}}
+      </li>
+
+    </ol>
+
+</div>
+
+
+</body>
+</html>
